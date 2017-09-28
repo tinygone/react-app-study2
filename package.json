@@ -1,0 +1,22 @@
+{
+  "name": "react-app-study2",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinygone/react-app-study2.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "tinygone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinygone/react-app-study2/issues"
+  },
+  "homepage": "https://github.com/tinygone/react-app-study2#readme"
+}
