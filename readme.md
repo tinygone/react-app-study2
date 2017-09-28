@@ -9,8 +9,9 @@
 ### 工具篇：
 Webstorm：开发工具，IDE，当然也可以使用Atom或其他文本编辑器
 Node.js：前端开发的基础运行环境，配合先进的NPM包管理器，有非常多的工具可供使用
-Webpack：打包工具，类似的有browerity
-Gulp：
+NPM：包管理工具（Package Manager），类似的还有Bower, Component, Spm, yarn，好用的就是NPM
+Webpack：模块打包工具(Bundler)，类似的有browerity
+Gulp：任务流工具(Task Runner)，解决一次性要执行多条命令的问题，类似的工具还有Grunt
 Babel：
 还有其他非常多的插件，用到的时候再往上补
 
