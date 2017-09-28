@@ -24,3 +24,13 @@ JSX：React的一种Javascript扩展语法
 
 ## 搭建开发环境
 这是基于Node.js, Webstorm的开发环境，同时使用Webpack+Babel等强大的工具。也就是本项目。
+
+### Webpack相关
+#### loader
+style-loader和css-loader
+npm install style-loader css-loader --save-dev
+
+#### plugin
+HtmlWebpackPlugin,自动生成项目的HTML页面，名称为html-webpack-plugin
+EnvironmentPlugin,向构建过程中注入环境变量，webpack内置
+BannerPlugin，向块(chunk)的结果文件中添加注释信息，webpack内置
