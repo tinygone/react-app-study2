@@ -34,3 +34,6 @@ npm install style-loader css-loader --save-dev
 HtmlWebpackPlugin,自动生成项目的HTML页面，名称为html-webpack-plugin
 EnvironmentPlugin,向构建过程中注入环境变量，webpack内置
 BannerPlugin，向块(chunk)的结果文件中添加注释信息，webpack内置
+
+###
+本项目暂停，国庆期间，有更多更重要的事情要做。
