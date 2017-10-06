@@ -16,6 +16,7 @@ module.exports = {
             }
         ]
     },
+    // 使用HtmlWebpackPlugin时，会自动生成index.html，不需要再手工添加
     plugins :[
         new HtmlWebpackPlugin({
             title :'use plugin'
