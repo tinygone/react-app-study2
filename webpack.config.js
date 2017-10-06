@@ -27,35 +27,38 @@ module.exports = {
     },
 
     module: {
-        // 配置 preloaders, 将 eslint 添加进来
-        preLoaders: [
+
+
+        loaders: [
+            // 配置 preloaders, 将 eslint 添加进来
             {
                 test: /\.jsx?$/,
-                loaders: ['eslint'],
-                include: APP_PATH
-            }
-        ],
-        // 配置 loader, 将 babel 添加进来
-        loaders: [
+                loaders: ['eslint-loader'],
+                include: APP_PATH,
+                //this is similar to defining a preloader
+                enforce: 'pre'
+            },
             {
                 test: /\.css$/,
                 loaders: ['style-loader', 'css-loader'],
                 include: APP_PATH
             },
+            // 配置 loader, 将 babel 添加进来
             {
                 test: /\.jsx?$/,
-                loaders: ['babel'],
+                loaders: ['babel-loader'],
                 include: APP_PATH
             }
         ]
-    }
-    ,
+    },
     // 使用HtmlWebpackPlugin时，会自动生成index.html，不需要再手工添加
     plugins: [
         new HtmlWebpackPlugin({
             title: 'My first react app'
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 
-}
-;
+};

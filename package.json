@@ -4,6 +4,8 @@
   "description": "study",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev":"webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,6 +41,7 @@
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^3.5.3",
     "style-loader": "^0.18.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server":"^2.9.1"
   }
 }
