@@ -39,8 +39,8 @@ module.exports = {
             //     enforce: 'pre'
             // },
             {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader'],
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader','sass-loader'],
                 include: APP_PATH
             },
             // 配置 loader, 将 babel 添加进来
@@ -54,7 +54,7 @@ module.exports = {
     // 使用HtmlWebpackPlugin时，会自动生成index.html，不需要再手工添加
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'My first react app'
+            title: 'Deskmark app'
         })
     ],
     resolve: {
