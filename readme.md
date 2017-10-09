@@ -45,6 +45,44 @@ npm install eslint eslint-loader --save-dev
 ESLint的格式插件较好的是Airbnb开发配置合集eslint-confit-airbnb，包括如下3个插件
 npm install eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-ally --save-dev
 npm install eslint-config-airbnb --save-dev
-###
+### 理解 applyMiddleware(thunkMiddleware)(createStore)(rootReducer)
+这是一个函数增强(覆盖)的写法。
+先看jsdemo.js中的例子：
+```
+// a为一个方法
+function a (str) {
+  console.log('a +' + str);
+}
+// b对a方法进行enhance(增强)
+function b() {
+  let tmp = a;
+  a = function(str) {
+    console.log('b');
+    tmp(str);
+    console.log('b end');
+  }
+  return a;
+}
+// 先调用b(a)得到enhancedA，再调用enhancedA('haha')
+b(a)('haha');
+```
+输出结果为：
+```
+b
+a +haha
+b end
+```
+故applyMiddleware(thunkMiddleware)(createStore)(rootReducer)，这段的展开形式应该为：
+```
+// applyMiddleware只用来处理多个middleware，返回一个enhancer
+middlewareEnhancer = applyMiddleware(thunkMiddleware);
+// 用enhancer处理createStore，得到storeEnhancer
+createStoreWithMiddleware = middlewareEnhancer(createStore);
+// 最后调用处理过和createStore方法，得到我们需要的store
+const store = createStoreWithMiddleware(rootReducer);
+```
+
+
+
 
 

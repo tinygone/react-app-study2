@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 //一些常用路径
 var ROOT_PATH = path.resolve(__dirname);
-var APP_PATH = path.resolve(ROOT_PATH, 'flux');
+var APP_PATH = path.resolve(ROOT_PATH, 'reduxdemo');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 module.exports = {
